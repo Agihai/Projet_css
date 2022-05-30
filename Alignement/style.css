@@ -1,0 +1,113 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+body {
+    background-color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section {
+    border: 2px solid greenyellow;
+    margin: 20 auto;
+    height: 250px;
+    width: 250px;
+}
+.deBase div {background-color: rgba(60, 141, 87, 0.541); height: 150px; width: 150px; }
+.c1 div {background-color: antiquewhite; height: 150px; width: 150px; }
+.c2 div {background-color: aqua; height: 150px; width: 150px; }
+.c3 div {background-color: firebrick; height: 150px; width: 150px; }
+.c4 div {background-color: blueviolet; height: 150px; width: 150px; }
+.c5 div {background-color: darkorange; height: 150px; width: 150px; }
+
+/* en deux element a centré le premier et une div qui et en pisplay
+block et une span qui et en display inline (marche aussi pour display inline-block  */
+
+
+/* la methode flex elle marche pour les element peut imprte leur display (car en le change en display flex)
+a pliqué a l'element parent*/
+.c1 {
+ display: flex;
+ justify-content: center; 
+ align-items: center; 
+
+}
+.c1 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c1 div span{
+
+}
+
+/* la methode grid elle marche pour les element peut imprte leur display (car en le change en display flex)
+a pliqué a l'element parent*/
+.c2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.c2 div {
+    display: grid;
+    place-content: center; /* place-content : center; et un racourssi pour ecrire remplacé
+        justify-centent : center; et align-items: center; */
+
+}
+
+.c2 div span{
+
+}
+
+/* avec les position relative et absolute*/
+.c3 {
+    position: relative;
+}
+.c3 div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.c3 div span{ /*  l'element parent a deja une position absolute / ou relative */
+    position: absolute;
+    top: 50%;
+    left: 50%; /* c valeur son calculer sur les bort de l'element enfant */
+    transform: translate(-50%,-50%); /* en ajuste le centre de notre element  */
+}
+
+/* text-align: center */
+.c4 {
+    text-align: center; /* et transmie au enfant du parent */
+    line-height: 250px; /* a ne pas utiliser */
+}
+.c4 div { 
+    display: inline-block; /* la dive et un element block text-align ne s'aplique pas sur elle
+    en doit la maitre en display inline ou inline-block (pour ne pas perdre la hauteur de l'element) */
+    /* line-height: 250px; */
+}
+
+.c4 div span{
+     
+
+}
+
+/* margine: 0 auto */
+.c5 {
+    
+}
+.c5 div {
+    margin: 0 auto;
+}
+
+.c5 div span{
+    display: block;
+    margin: 0 auto; /* margin:  0 auto; ne marche que sur les element en display block */
+
+}
