@@ -76,10 +76,9 @@
 
 
 .container-navlinks {
-width: 100%;
-display: flex;
-justify-items: center;
-
+        display: flex;
+        justify-content: center;
+    
 }
 
 .nav-right {
