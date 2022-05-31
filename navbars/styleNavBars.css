@@ -25,12 +25,36 @@
 
 /* Nav #3 */
 /* Mettre l'icône à gauche et les liens à droite */
+.nav-3 {
+    display: flex;
+    align-items: center;
+}
+
+.first-a {
+    margin-left: auto;
+} 
+/* on peut aussi utiliser  
+ .nav-3 a:first-of-type {
+    margin-left: auto;
+} */
 
 
 
 
 /* Nav #4 */
 /* Mettre l'icône Saturne au milieu et les liens à gauche */
+.nav-4 {
+    display: flex;
+    align-items: center;
+}
+.links-container {
+    width: 50%;
+}
+
+/* .empty-layout {   /* n'ai pas necessaire
+ width: 50%;
+} */
+
 
 
 
