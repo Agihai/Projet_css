@@ -57,12 +57,38 @@
 
 
 
-
-
-
 /* Nav #5 */
 /* Centrer les éléments sur Y */
 /* Mettre les textes au centre sur X */
 /* Afficher la patte de chat à gauche */
 /* Afficher les trois icônes à droite */
+
+
+.nav-5 {
+    display: flex;
+    align-items: center;
+}
+
+.nav-5 a {
+    width: 100%;
+    display: flex;
+} 
+
+
+.container-navlinks {
+width: 100%;
+display: flex;
+justify-items: center;
+
+}
+
+.nav-right {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
 
