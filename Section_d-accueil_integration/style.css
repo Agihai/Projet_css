@@ -73,10 +73,10 @@ nav a:hover::after {
     font-weight: 800; /*  marche pas a testé avec une autre font  */
     padding-top: 200px;
     color: bisque;
-    font-size: clamp(45px,8vw,210px); /* prent 3 parametre la taille mini , la taille entre les deux, la taille max */
+    font-size: clamp(45px,8vw,140px); /* prent 3 parametre la taille mini , la taille entre les deux, la taille max */
 }
 .section1 div h2 {
-    font-size: clamp(38px,6vw,170px);
+    font-size: clamp(38px,6vw,100px);
     color: cornsilk;
     text-transform: uppercase;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -107,9 +107,96 @@ nav a:hover::after {
 }
 
 
-/* .chevron-bas {
-    width: 40px;
+.chevron-bas {
     
-} */
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: whitesmoke;
+    border-radius: 50%;
+    bottom: 5%;
+    left: 50%;
+    border: 2px solid rgba(139, 139, 139, 0.701);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 white;
+    animation: pulse 1.3s infinite ;
+}
 
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.01);
+    }
+}
+ .chevron-bas img {
+     
+     width: 30PX;
+ }
+
+
+ /* responsive */
+/* le plus gros du travaile et deja efectuet grace font-size : clamp  */
+
+/* en va gérait la hoteur les taille des element  suivant l'ecrant de l'utilisateur (v) */
+
+@media screen and (max-width:650px) {
+
+    .section1 {
+        height: 70vh;
+        padding: 0 25;
+    }
+    .section1 div h1 {
+        padding-top: 120px;
+    }
+    nav a {
+        font-size: 15px;
+    }
+    .start-live {
+        max-width: 140px;
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+    .start-live img {
+        width: 23px;
+    }
+    .chevron-bas {
+        width: 40px;
+        height: 40px ;
+    }
+    .chevron-bas img {
+        width: 17px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .section1 {
+        height: 100vh;
+        padding: 0 10;
+    }
+    
+    .section1 div h1 {
+        padding-top: 100px;
+    }
+    nav a {
+        font-size: 13px;
+    }
+    .start-live {
+        max-width: 150px;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .start-live img {
+        width: 25px;
+    }
+    .chevron-bas {
+        width: 45px;
+        height: 45px ;
+    }
+    .chevron-bas img {
+        width: 20px;
+    }
+}  
+/* a amelioré pas le temps ^^' */
 
