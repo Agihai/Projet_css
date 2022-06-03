@@ -54,6 +54,8 @@ nav a:hover::after {
     
 }
 
+/* body  */
+
 .section1 {
     height: 100vh;
     background: url(/Section_d-accueil_integration/src/citynight.jpg);
@@ -68,19 +70,46 @@ nav a:hover::after {
 .section1 div h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-transform: uppercase;
+    font-weight: 800; /*  marche pas a testé avec une autre font  */
     padding-top: 200px;
     color: bisque;
-    font-weight: 900;
     font-size: clamp(45px,8vw,210px); /* prent 3 parametre la taille mini , la taille entre les deux, la taille max */
 }
+.section1 div h2 {
+    font-size: clamp(38px,6vw,170px);
+    color: cornsilk;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -1px;
+}
 
-/* body  */
-/* section1 */
+.start-live {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    font-size: 18px;
+    font-weight: 800;
+    background: whitesmoke;
+    text-decoration: none;
+    color: darkslategrey;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
 
-
- 
-
-
- img {
+.start-live img {
     width: 30px;
 }
+
+.start-live:hover {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.952);
+}
+
+
+/* .chevron-bas {
+    width: 40px;
+    
+} */
+
+
